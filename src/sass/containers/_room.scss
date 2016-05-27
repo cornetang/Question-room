@@ -1,0 +1,120 @@
+.page-room {
+    margin-top: 2.8rem;
+    padding-top: 1rem;
+}
+
+.img-not-found {
+    width: 100%;
+    max-width: 24rem;
+    padding: 0 2rem;
+}
+
+.icon-search, .icon-reset {
+    position: absolute;
+    border: 0;
+    border-radius: 0;
+    background-color: transparent;
+    padding: .375rem .3rem;
+    margin: 0 -.2rem 0 0;
+    z-index: 1021;
+    cursor: pointer;
+}
+
+.icon-search {
+    right: .3rem;
+    color: $gray-light;
+}
+
+.icon-reset {
+    right: 1.6rem;
+    color: mix($gray-lighter, black, 75%);
+}
+
+.question-search-form {
+    max-width: 20rem;
+}
+
+.question-searchbar {
+    font-size: 0.875rem;
+    padding: .2rem 2.5rem .2rem .2rem;
+
+    border-radius: 0;
+    border: none;
+    border-bottom: .0625rem solid mix($gray-lighter, black, 90%);
+    background-color: transparent;
+
+    @include hover-focus { border-bottom-color: $brand-primary; }
+}
+
+.fixed-flex-container {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(lg) { flex-direction: row; }
+    .col-fixed-left {
+        flex: 0 1 auto;
+        order: 1;
+        width: 100%;
+        @include media-breakpoint-up(lg) { flex: 0 0 12rem; width: auto; }
+    }
+    .col-fixed-right {
+        flex: 0 1 auto;
+        order: 2;
+        width: 100%;
+        padding-left: 0;
+
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-up(lg) {
+            display: inline-block;
+            flex: 0 0 14rem;
+            order: 3;
+            width: auto;
+            padding-left: 1.5rem;
+        }
+
+        @include media-breakpoint-down(md) {
+            > div { margin-right: 3rem; }
+        }
+
+        @include media-breakpoint-down(sm) {
+            display: inline-block;
+            > div {
+                margin-right: 1rem;
+                &:nth-of-type(2) { margin-right: 0; }
+            }
+        }
+
+        .side-heading {
+            font-size: .875rem;
+            margin-bottom: .2rem;
+        }
+    }
+    .col-flex {
+        order: 3;
+        max-width: 40rem;
+        width: 100%;
+        @include media-breakpoint-up(lg) { order: 2; }
+    }
+}
+
+.btn-social-media {
+    color: white;
+    width: 3rem;
+    height: 2.4rem;
+    padding: .4rem .4rem;
+}
+
+.btn-fb {
+    @include hover-focus { color: mix(white, #3B5998, 60%); }
+    background-color: #3B5998;
+}
+
+.btn-tw {
+    @include hover-focus { color: mix(white, #55ACEE, 60%); }
+    background-color: #55ACEE;
+}
+
+.btn-at {
+    @include hover-focus { color: mix(white, #88E2D4, 60%); }
+    background-color: #88E2D4;
+}

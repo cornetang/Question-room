@@ -1,0 +1,66 @@
+@import "bootstrap/_bootwrap";
+@import "browser-fix";
+
+@import "components/navbar";
+@import "components/question-form";
+@import "components/question-list";
+
+@import "containers/home";
+@import "containers/room";
+
+html, body {
+    min-width: 20rem;
+    background-color: $gray-lightest;
+}
+body.noscroll { overflow: hidden; }
+
+input[type="text"], input[type="search"], textarea { appearance: none; }
+textarea { resize: none; }
+
+.label-outline {
+    padding: .8rem !important;
+    font-size: 1rem !important;
+    border: solid 0.0625rem $brand-primary;
+    color: $brand-primary;
+    background-color: none;
+}
+
+section {
+    &.parallax-spacer {
+        background: transparent;
+    }
+    > .section-heading { margin-bottom: 2rem; }
+}
+
+.card {
+    background-color: white;
+}
+
+.card-block {
+    padding: 1rem;
+}
+
+.help-block {
+    margin-bottom: 0;
+}
+
+.jumbotron {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+.label {
+    font-size: .8rem;
+    font-weight: normal;
+    padding: .5rem;
+    margin: .1rem;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    .site-content {
+        flex: 1;
+    }
+}

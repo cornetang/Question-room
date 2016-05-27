@@ -1,0 +1,7 @@
+$img-list:
+    url("/img/logotype.png");
+
+body:after {
+    content: $img-list;
+    display: none;
+}

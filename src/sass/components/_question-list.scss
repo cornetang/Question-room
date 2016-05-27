@@ -1,0 +1,103 @@
+.list-presentation {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1100;
+    background-color: transparentize(black, .2);
+    > .question-list {
+        max-width: 56rem;
+        margin: 3rem auto;
+        z-index: 1102;
+    }
+}
+
+.comment {
+    background-color: darken($gray-lightest, 2%);
+}
+
+.btn-comment {
+    width: 8rem;
+}
+
+.comment-textarea {
+    border: none;
+}
+
+.btn-presentation-close {
+    position: fixed;
+    top: 0.5rem; right: 1rem;
+    color: $gray-light;
+    cursor: pointer;
+    z-index: 1103;
+}
+
+.hashtag {
+    cursor: pointer;
+}
+
+.question-image {
+    max-height: 8rem;
+    max-width: 100%;
+    margin: .5rem 0;
+}
+
+.question-detail-loading {
+    margin-top: 6rem;
+    text-align: center;
+    color: $gray-lighter;
+}
+
+.question-list-item {
+    display: flex;
+
+    .col-side {
+        overflow: hidden;
+        align-self: center;
+        text-align: center;
+        flex: 0 0 2.4rem;
+    }
+    .col-main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .row-flex {
+            flex: 1;
+            height: auto;
+            color: $gray;
+        }
+
+        .row-bottom {
+            flex: 0 0 ($line-height * $font-size-root * 1.8);
+            font-size: .9rem;
+        }
+    }
+}
+
+.list-spinner-container {
+    position: absolute;
+    border-radius: .2rem;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: transparentize($gray-dark, 0.8);
+}
+
+.vote-disabled {
+    .btn-upvote, .btn-downvote {
+        color: mix($gray-lighter, white, 80);
+        @include hover-focus {
+            color: $gray-lighter;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.btn-upvote, .btn-downvote {
+    color: mix($gray-light, white, 30);
+    height: 2.25rem;
+    @include hover-focus {
+        color: $brand-primary;
+        cursor: pointer;
+    }
+}
